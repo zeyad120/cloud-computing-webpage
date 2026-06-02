@@ -4,133 +4,34 @@ const quizDatabase = {
         title: "Introduction to Cloud Computing – Full Coverage MCQ Quiz",
         questions: [
             {
-                question: "How many main parts does the Cloud Computing course contain?",
-                options: [
-                    "5",
-                    "6",
-                    "7",
-                    "8"
-                ],
-                correctAnswer: 2,
-                explanation: "The Cloud Computing course contains 7 main parts covering various aspects of cloud technology."
-            },
-            {
-                question: "Which topic is covered in this course?",
-                options: [
-                    "Machine Learning",
-                    "Virtualization Technology",
-                    "Computer Vision",
-                    "Blockchain"
-                ],
-                correctAnswer: 1,
-                explanation: "Virtualization Technology is one of the key topics covered in the Cloud Computing course."
-            },
-            {
-                question: "Which topic is associated with the Big Data course?",
-                options: [
-                    "Networking Support",
-                    "Virtualization",
-                    "MapReduce",
-                    "Migration Technology"
-                ],
-                correctAnswer: 2,
-                explanation: "MapReduce is a programming model associated with Big Data processing and is covered in the Big Data course."
-            },
-            {
-                question: "Cloud Computing is primarily introduced as:",
-                options: [
-                    "Graduate-level course",
-                    "Undergraduate-level course",
-                    "High school course",
-                    "Doctoral course"
-                ],
-                correctAnswer: 1,
-                explanation: "Cloud Computing is primarily introduced as an undergraduate-level course."
-            },
-            {
-                question: "The course includes practical tutorials on:",
-                options: [
-                    "Database Design",
-                    "Cloud Infrastructure Technologies",
-                    "Robotics",
-                    "Compiler Design"
-                ],
-                correctAnswer: 1,
-                explanation: "The course includes practical tutorials on Cloud Infrastructure Technologies to provide hands-on experience."
-            },
-            {
-                question: "A student loses how much for each missed lecture?",
-                options: [
-                    "0.25 degree",
-                    "0.5 degree",
-                    "1 degree",
-                    "2 degrees"
-                ],
-                correctAnswer: 1,
-                explanation: "A student loses 0.5 degree for each missed lecture according to the course policy."
-            },
-            {
-                question: "Late submission causes a deduction of:",
-                options: [
-                    "5% per day",
-                    "10% per day",
-                    "15% per day",
-                    "20% per day"
-                ],
-                correctAnswer: 1,
-                explanation: "Late submission causes a deduction of 10% per day from the total grade."
-            },
-            {
-                question: "Assignments and quizzes should be done:",
-                options: [
-                    "In groups",
-                    "Individually",
-                    "Online only",
-                    "With instructor help"
-                ],
-                correctAnswer: 1,
-                explanation: "Assignments and quizzes should be done individually to ensure fair assessment."
-            },
-            {
-                question: "Which topic is NOT listed in the chapter contents?",
-                options: [
-                    "Cloud Challenges",
-                    "Distributed Systems",
-                    "Artificial Intelligence",
-                    "Delivery Models"
-                ],
-                correctAnswer: 2,
-                explanation: "Artificial Intelligence is not listed in the chapter contents of the Cloud Computing course."
-            },
-            {
                 question: "According to NIST, Cloud Computing provides:",
                 options: [
-                    "Local access only",
-                    "On-demand network access",
+                    "Local resource access only",
+                    "On-demand network access to shared resources",
                     "Offline computing",
-                    "Fixed resources"
+                    "Dedicated hardware only"
                 ],
                 correctAnswer: 1,
-                explanation: "According to NIST, Cloud Computing provides on-demand network access to a shared pool of computing resources."
+                explanation: "According to NIST, Cloud Computing provides on-demand network access to shared computing resources."
             },
             {
-                question: "Cloud resources can be:",
+                question: "Which of the following is NOT mentioned as a cloud resource in the NIST definition?",
                 options: [
                     "Networks",
                     "Servers",
                     "Storage",
-                    "All of the above"
+                    "Microcontrollers"
                 ],
                 correctAnswer: 3,
-                explanation: "Cloud resources can include networks, servers, storage, applications, and services."
+                explanation: "Microcontrollers are NOT mentioned as a cloud resource in the NIST definition."
             },
             {
                 question: "Cloud resources can be rapidly:",
                 options: [
-                    "Deleted only",
-                    "Purchased only",
+                    "Sold",
+                    "Purchased",
                     "Provisioned and released",
-                    "Installed manually"
+                    "Deleted permanently"
                 ],
                 correctAnswer: 2,
                 explanation: "Cloud resources can be rapidly provisioned and released with minimal management effort."
@@ -140,99 +41,110 @@ const quizDatabase = {
                 options: [
                     "High management effort",
                     "Minimal management effort",
-                    "No networking",
-                    "Dedicated hardware ownership"
+                    "No network",
+                    "Dedicated administrators"
                 ],
                 correctAnswer: 1,
                 explanation: "Cloud Computing requires minimal management effort or service provider interaction."
             },
             {
-                question: "Which is an essential characteristic of cloud computing?",
+                question: "How many essential characteristics are defined by NIST?",
                 options: [
-                    "On-demand self-service",
-                    "Manual setup",
-                    "Local processing",
-                    "Fixed storage"
-                ],
-                correctAnswer: 0,
-                explanation: "On-demand self-service is an essential characteristic where consumers can provision computing capabilities as needed."
-            },
-            {
-                question: "Which characteristic allows access from various devices over networks?",
-                options: [
-                    "Resource Pooling",
-                    "Broad Network Access",
-                    "Measured Service",
-                    "Elasticity"
-                ],
-                correctAnswer: 1,
-                explanation: "Broad Network Access allows capabilities to be available over the network and accessed through standard mechanisms."
-            },
-            {
-                question: "Which characteristic allows resource sharing among multiple users?",
-                options: [
-                    "Resource Pooling",
-                    "SaaS",
-                    "Hybrid Cloud",
-                    "Virtualization"
-                ],
-                correctAnswer: 0,
-                explanation: "Resource Pooling allows computing resources to serve multiple consumers using a multi-tenant model."
-            },
-            {
-                question: "Which characteristic enables quick scaling?",
-                options: [
-                    "Measured Service",
-                    "Resource Pooling",
-                    "Rapid Elasticity",
-                    "Community Cloud"
-                ],
-                correctAnswer: 2,
-                explanation: "Rapid Elasticity enables capabilities to be rapidly scaled outward and inward commensurate with demand."
-            },
-            {
-                question: "Which characteristic measures usage for billing and monitoring?",
-                options: [
-                    "Rapid Elasticity",
-                    "Measured Service",
-                    "Broad Network Access",
-                    "IaaS"
-                ],
-                correctAnswer: 1,
-                explanation: "Measured Service allows resource usage to be monitored, controlled, and reported providing transparency for both provider and consumer."
-            },
-            {
-                question: "How many cloud service models are listed by NIST?",
-                options: [
-                    "2",
                     "3",
                     "4",
-                    "5"
+                    "5",
+                    "6"
+                ],
+                correctAnswer: 2,
+                explanation: "NIST defines 5 essential characteristics of Cloud Computing."
+            },
+            {
+                question: "Which characteristic allows users to obtain resources automatically when needed?",
+                options: [
+                    "Resource Pooling",
+                    "Measured Service",
+                    "On-Demand Self-Service",
+                    "Broad Network Access"
+                ],
+                correctAnswer: 2,
+                explanation: "On-Demand Self-Service allows users to obtain resources automatically when needed."
+            },
+            {
+                question: "Which characteristic enables access through various networked devices?",
+                options: [
+                    "Resource Pooling",
+                    "Broad Network Access",
+                    "Rapid Elasticity",
+                    "Measured Service"
                 ],
                 correctAnswer: 1,
-                explanation: "NIST lists three cloud service models: IaaS, PaaS, and SaaS."
+                explanation: "Broad Network Access enables access through various networked devices."
+            },
+            {
+                question: "Resource Pooling means:",
+                options: [
+                    "Resources are dedicated to one user",
+                    "Resources are shared among multiple users",
+                    "Resources are stored locally",
+                    "Resources are manually allocated"
+                ],
+                correctAnswer: 1,
+                explanation: "Resource Pooling means resources are shared among multiple users using a multi-tenant model."
+            },
+            {
+                question: "Rapid Elasticity refers to:",
+                options: [
+                    "Data encryption",
+                    "Fast resource scaling",
+                    "Network security",
+                    "Resource monitoring"
+                ],
+                correctAnswer: 1,
+                explanation: "Rapid Elasticity refers to fast resource scaling capabilities."
+            },
+            {
+                question: "Measured Service means:",
+                options: [
+                    "Services are manually tracked",
+                    "Resource usage can be monitored and measured",
+                    "Resources cannot be monitored",
+                    "Users must report usage"
+                ],
+                correctAnswer: 1,
+                explanation: "Measured Service means resource usage can be monitored and measured."
+            },
+            {
+                question: "Which is NOT a cloud service model?",
+                options: [
+                    "SaaS",
+                    "PaaS",
+                    "IaaS",
+                    "DAS"
+                ],
+                correctAnswer: 3,
+                explanation: "DAS is NOT a cloud service model. The standard models are SaaS, PaaS, and IaaS."
             },
             {
                 question: "SaaS stands for:",
                 options: [
-                    "System as a Service",
                     "Software as a Service",
                     "Storage as a Service",
-                    "Security as a Service"
+                    "Security as a Service",
+                    "Server as a Service"
                 ],
-                correctAnswer: 1,
-                explanation: "SaaS stands for Software as a Service, where applications are provided over the internet."
+                correctAnswer: 0,
+                explanation: "SaaS stands for Software as a Service."
             },
             {
                 question: "PaaS stands for:",
                 options: [
+                    "Public as a Service",
                     "Platform as a Service",
-                    "Program as a Service",
                     "Processing as a Service",
-                    "Public as a Service"
+                    "Program as a Service"
                 ],
-                correctAnswer: 0,
-                explanation: "PaaS stands for Platform as a Service, providing a platform for customers to develop and deploy applications."
+                correctAnswer: 1,
+                explanation: "PaaS stands for Platform as a Service."
             },
             {
                 question: "IaaS stands for:",
@@ -243,98 +155,76 @@ const quizDatabase = {
                     "Integration as a Service"
                 ],
                 correctAnswer: 0,
-                explanation: "IaaS stands for Infrastructure as a Service, providing virtualized computing resources over the internet."
+                explanation: "IaaS stands for Infrastructure as a Service."
             },
             {
-                question: "How many deployment models are listed by NIST?",
+                question: "Which deployment model is accessible to the general public?",
                 options: [
-                    "2",
-                    "3",
-                    "4",
-                    "5"
-                ],
-                correctAnswer: 2,
-                explanation: "NIST lists four deployment models: Private, Community, Public, and Hybrid clouds."
-            },
-            {
-                question: "Which of the following is a deployment model?",
-                options: [
-                    "SaaS",
-                    "PaaS",
-                    "Hybrid Cloud",
-                    "IaaS"
-                ],
-                correctAnswer: 2,
-                explanation: "Hybrid Cloud is a deployment model, while SaaS, PaaS, and IaaS are service models."
-            },
-            {
-                question: "Which deployment model is owned and operated by a single organization?",
-                options: [
-                    "Public",
-                    "Community",
                     "Private",
+                    "Community",
+                    "Public",
                     "Hybrid"
                 ],
                 correctAnswer: 2,
-                explanation: "Private Cloud is owned and operated by a single organization."
+                explanation: "Public Cloud is accessible to the general public."
             },
             {
-                question: "Cloud Computing is considered:",
+                question: "Which deployment model is owned by a single organization?",
                 options: [
-                    "A business model",
-                    "A programming language",
-                    "An operating system",
-                    "A database"
+                    "Public",
+                    "Community",
+                    "Hybrid",
+                    "Private"
+                ],
+                correctAnswer: 3,
+                explanation: "Private Cloud is owned by a single organization."
+            },
+            {
+                question: "A Hybrid Cloud combines:",
+                options: [
+                    "Public and Private clouds",
+                    "SaaS and PaaS",
+                    "LAN and WAN",
+                    "Grid and Cluster"
                 ],
                 correctAnswer: 0,
-                explanation: "Cloud Computing is considered a business model that provides computing services over the internet."
+                explanation: "A Hybrid Cloud combines Public and Private clouds."
             },
             {
-                question: "Cloud Computing costs are generally:",
+                question: "Cloud Computing is generally:",
                 options: [
-                    "Higher",
-                    "Lower",
-                    "Equal",
-                    "Unpredictable"
+                    "More expensive than traditional systems",
+                    "Less expensive than similar traditional solutions",
+                    "Equal in cost",
+                    "Impossible to measure"
                 ],
                 correctAnswer: 1,
-                explanation: "Cloud Computing costs are generally lower due to the pay-as-you-go model and economies of scale."
+                explanation: "Cloud Computing is generally less expensive than similar traditional solutions."
             },
             {
-                question: "Cloud Computing supports:",
+                question: "Cloud Computing mainly supports:",
                 options: [
-                    "Batch-only processing",
-                    "On-demand model",
-                    "Offline processing",
-                    "Manual scaling"
+                    "Fixed-demand computing",
+                    "On-demand computing",
+                    "Offline computing",
+                    "Manual computing"
                 ],
                 correctAnswer: 1,
-                explanation: "Cloud Computing supports an on-demand model where resources can be provisioned as needed."
+                explanation: "Cloud Computing mainly supports on-demand computing."
             },
             {
-                question: "Cloud services can be customized according to:",
+                question: "One major advantage of Cloud Computing is:",
                 options: [
-                    "Vendor needs",
-                    "User needs",
-                    "Hardware limitations",
-                    "Operating system"
+                    "Reduced scalability",
+                    "Scalability without high IT overhead",
+                    "No networking support",
+                    "No resource sharing"
                 ],
                 correctAnswer: 1,
-                explanation: "Cloud services can be customized according to user needs and requirements."
+                explanation: "One major advantage of Cloud Computing is scalability without high IT overhead."
             },
             {
-                question: "Cloud Computing provides scalability:",
-                options: [
-                    "Only when hardware is purchased",
-                    "When needed without high IT overhead",
-                    "Only in private clouds",
-                    "Only for large companies"
-                ],
-                correctAnswer: 1,
-                explanation: "Cloud Computing provides scalability when needed without high IT overhead through rapid elasticity."
-            },
-            {
-                question: "Which is an example of a cloud service?",
+                question: "Which of the following can be offered as a cloud service?",
                 options: [
                     "Desktop",
                     "Database",
@@ -342,32 +232,21 @@ const quizDatabase = {
                     "All of the above"
                 ],
                 correctAnswer: 3,
-                explanation: "Desktop, Database, and Networking are all examples of cloud services available in various cloud platforms."
+                explanation: "Desktop, Database, and Networking can all be offered as cloud services."
             },
             {
-                question: "Google Chrome Remote Desktop is an example of:",
+                question: "Network-Centric Computing relies on:",
                 options: [
-                    "Cloud Desktop Service",
-                    "Database Service",
-                    "Compiler Service",
-                    "Security Service"
-                ],
-                correctAnswer: 0,
-                explanation: "Google Chrome Remote Desktop is an example of a Cloud Desktop Service that allows remote access to computers."
-            },
-            {
-                question: "When distant data centers are used instead of local systems, this is called:",
-                options: [
-                    "Local Computing",
-                    "Network-Centric Computing",
-                    "Edge Computing",
-                    "Mobile Computing"
+                    "Local computers only",
+                    "Remote computing resources over the Internet",
+                    "Standalone machines",
+                    "Offline storage"
                 ],
                 correctAnswer: 1,
-                explanation: "Network-Centric Computing refers to using distant data centers instead of local systems for computing tasks."
+                explanation: "Network-Centric Computing relies on remote computing resources over the Internet."
             },
             {
-                question: "Grid Computing started primarily in:",
+                question: "Grid Computing emerged mainly in:",
                 options: [
                     "1980s",
                     "Early 1990s",
@@ -375,73 +254,84 @@ const quizDatabase = {
                     "2015"
                 ],
                 correctAnswer: 1,
-                explanation: "Grid Computing started primarily in the early 1990s as a way to share computing resources across networks."
+                explanation: "Grid Computing emerged mainly in the early 1990s."
             },
             {
-                question: "Cloud Computing emerged mainly around:",
+                question: "Cloud Computing became popular around:",
                 options: [
-                    "1990–1991",
-                    "1995–1996",
+                    "1990",
+                    "1995",
                     "2005–2006",
-                    "2015–2016"
+                    "2015"
                 ],
                 correctAnswer: 2,
-                explanation: "Cloud Computing emerged mainly around 2005-2006 with the introduction of services like AWS EC2."
+                explanation: "Cloud Computing became popular around 2005–2006."
             },
             {
-                question: "Grid Computing was mainly targeted at:",
+                question: "Grid Computing primarily targeted:",
                 options: [
                     "Enterprise Computing",
                     "Scientific Computing",
-                    "Mobile Computing",
-                    "Gaming"
-                ],
-                correctAnswer: 1,
-                explanation: "Grid Computing was mainly targeted at Scientific Computing for research and academic purposes."
-            },
-            {
-                question: "Cloud Computing was mainly targeted at:",
-                options: [
-                    "Scientific Computing",
-                    "Enterprise Computing",
                     "Mobile Computing",
                     "Personal Computing"
                 ],
                 correctAnswer: 1,
-                explanation: "Cloud Computing was mainly targeted at Enterprise Computing for business applications and services."
+                explanation: "Grid Computing primarily targeted Scientific Computing."
             },
             {
-                question: "In Grid Computing, users:",
+                question: "Cloud Computing primarily targeted:",
                 options: [
-                    "Access resources directly",
-                    "Cannot access resources",
-                    "Must own resources",
-                    "Use only local machines"
+                    "Enterprise Computing",
+                    "Scientific Computing",
+                    "Embedded Systems",
+                    "Mobile Networks"
                 ],
                 correctAnswer: 0,
-                explanation: "In Grid Computing, users can access resources directly across the distributed grid network."
+                explanation: "Cloud Computing primarily targeted Enterprise Computing."
             },
             {
-                question: "Which is a Cloud Computing challenge?",
+                question: "A major difference between Grid and Cloud Computing is:",
+                options: [
+                    "Grid users access resources directly",
+                    "Cloud users access resources directly",
+                    "Grid has no resource sharing",
+                    "Cloud has no resource sharing"
+                ],
+                correctAnswer: 0,
+                explanation: "A major difference is that Grid users access resources directly."
+            },
+            {
+                question: "Which of the following is a Cloud Computing challenge?",
                 options: [
                     "Data Confidentiality",
-                    "Resource Management",
+                    "Service Availability",
                     "Data Transfer Bottleneck",
                     "All of the above"
                 ],
                 correctAnswer: 3,
-                explanation: "Data Confidentiality, Resource Management, and Data Transfer Bottleneck are all challenges in Cloud Computing."
+                explanation: "Data Confidentiality, Service Availability, and Data Transfer Bottleneck are all Cloud Computing challenges."
+            },
+            {
+                question: "Performance unpredictability in cloud systems is often caused by:",
+                options: [
+                    "Resource sharing",
+                    "Lack of storage",
+                    "No networking",
+                    "No virtualization"
+                ],
+                correctAnswer: 0,
+                explanation: "Performance unpredictability in cloud systems is often caused by resource sharing."
             },
             {
                 question: "Cloud Computing is built upon:",
                 options: [
-                    "Operating Systems",
-                    "Database Systems",
                     "Distributed System Architecture",
-                    "Programming Languages"
+                    "Compiler Design",
+                    "Data Structures",
+                    "Operating Systems only"
                 ],
-                correctAnswer: 2,
-                explanation: "Cloud Computing is built upon Distributed System Architecture that enables resource sharing across networks."
+                correctAnswer: 0,
+                explanation: "Cloud Computing is built upon Distributed System Architecture."
             }
         ]
     },
