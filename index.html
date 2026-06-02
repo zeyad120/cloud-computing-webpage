@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Interactive Quiz Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Background Elements -->
+        <div class="stars-background"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <span>QuizMaster</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="global-stats">
+                    <span class="stat-item">Accuracy: <span id="global-accuracy">0%</span></span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Home Screen -->
+        <section id="home-screen" class="screen active">
+            <div class="hero-section">
+                <h1 class="hero-title">Test Your Knowledge</h1>
+                <p class="hero-description">Choose a category and challenge yourself with interactive quizzes</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card" data-category="cloud-computing">
+                    <div class="category-icon">☁️</div>
+                    <h3 class="category-title">Introduction to Cloud Computing – Full Coverage MCQ Quiz</h3>
+                    <p class="category-description">Test your knowledge on cloud services, architectures, and best practices</p>
+                    <div class="category-meta">
+                        <span class="question-count">40 Questions</span>
+                    </div>
+                    <button type="button" class="start-quiz-btn">Start Quiz</button>
+                </div>
+
+                <div class="category-card" data-category="distributed-systems">
+                    <div class="category-icon">🌐</div>
+                    <h3 class="category-title">Distributed Systems – Full Coverage MCQ Quiz</h3>
+                    <p class="category-description">Test your knowledge on distributed systems, nodes, transparency, and scalability</p>
+                    <div class="category-meta">
+                        <span class="question-count">40 Questions</span>
+                    </div>
+                    <button type="button" class="start-quiz-btn">Start Quiz</button>
+                </div>
+
+                <div class="category-card" data-category="distributed-systems-2">
+                    <div class="category-icon">📊</div>
+                    <h3 class="category-title">Distributed Systems</h3>
+                    <p class="category-description">Parallel computing, processes, threads, RPC, and architectural styles</p>
+                    <div class="category-meta">
+                        <span class="question-count">50 Questions</span>
+                    </div>
+                    <button type="button" class="start-quiz-btn">Start Quiz</button>
+                </div>
+
+                <div class="category-card" data-category="distributed-systems-part2">
+                    <div class="category-icon">🔒</div>
+                    <h3 class="category-title">Distributed Systems Part 2</h3>
+                    <p class="category-description">Cloud classification, parallel architecture, process management, and architecture styles</p>
+                    <div class="category-meta">
+                        <span class="question-count">50 Questions</span>
+                    </div>
+                    <button type="button" class="start-quiz-btn">Start Quiz</button>
+                </div>
+
+                <div class="category-card" data-category="cloud-virtualization">
+                    <div class="category-icon">☁️</div>
+                    <h3 class="category-title">CloudComputing-Virtualization</h3>
+                    <p class="category-description">Virtualization basics, hypervisor types, CPU/Memory/I/O virtualization, and KVM</p>
+                    <div class="category-meta">
+                        <span class="question-count">30 Questions</span>
+                    </div>
+                    <button type="button" class="start-quiz-btn">Start Quiz</button>
+                </div>
+
+                <div class="category-card" data-category="virtualization">
+                    <div class="category-icon">💻</div>
+                    <h3 class="category-title">Virtualization</h3>
+                    <p class="category-description">Motivation, RAID, layering, VMM, x86 challenges, Xen, and containers</p>
+                    <div class="category-meta">
+                        <span class="question-count">40 Questions</span>
+                    </div>
+                    <button type="button" class="start-quiz-btn">Start Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen">
+            <div class="quiz-nav">
+                <button type="button" class="quit-btn" id="quit-btn" aria-label="Quit quiz">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                    Quit
+                </button>
+                <h2 class="quiz-title" id="quiz-title">Category Title</h2>
+                <div class="question-tracker">
+                    <span id="current-question-num">1</span> / <span id="total-questions">10</span>
+                </div>
+                <div class="jump-to-container">
+                    <select class="jump-to-select" id="jump-to-select" aria-label="Jump to question">
+                        <option value="">Jump to...</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3 class="question-text" id="question-text">Question text goes here?</h3>
+                <div class="options-container" id="options-container">
+                    <button type="button" class="option-btn" data-index="0">
+                        <span class="option-label">A</span>
+                        <span class="option-text">Option A</span>
+                    </button>
+                    <button type="button" class="option-btn" data-index="1">
+                        <span class="option-label">B</span>
+                        <span class="option-text">Option B</span>
+                    </button>
+                    <button type="button" class="option-btn" data-index="2">
+                        <span class="option-label">C</span>
+                        <span class="option-text">Option C</span>
+                    </button>
+                    <button type="button" class="option-btn" data-index="3">
+                        <span class="option-label">D</span>
+                        <span class="option-text">Option D</span>
+                    </button>
+                </div>
+
+                <div class="explanation-panel" id="explanation-panel">
+                    <div class="explanation-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        <span>Explanation</span>
+                    </div>
+                    <p class="explanation-text" id="explanation-text"></p>
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <p class="hint-text" id="hint-text">Select an answer to continue</p>
+                <div class="nav-buttons">
+                    <button type="button" class="nav-btn next-btn" id="next-btn" disabled>
+                        Next
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Screen -->
+        <section id="results-screen" class="screen">
+            <div class="results-container">
+                <div class="trophy-icon">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                        <path d="M4 22h16"/>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                    </svg>
+                </div>
+
+                <h2 class="results-title">Quiz Completed!</h2>
+                <p class="results-message" id="results-message">Great job on completing the quiz!</p>
+                <div class="score-circle">
+                    <svg class="progress-ring" width="150" height="150">
+                        <circle class="progress-ring-bg" cx="75" cy="75" r="60"/>
+                        <circle class="progress-ring-fill" id="score-ring" cx="75" cy="75" r="60"/>
+                    </svg>
+                    <div class="score-text">
+                        <span class="score-percentage" id="score-percentage">0%</span>
+                        <span class="score-label">Score</span>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box correct">
+                        <div class="stat-icon">✓</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="correct-count">0</span>
+                            <span class="stat-label">Correct</span>
+                        </div>
+                    </div>
+                    <div class="stat-box incorrect">
+                        <div class="stat-icon">✗</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="incorrect-count">0</span>
+                            <span class="stat-label">Incorrect</span>
+                        </div>
+                    </div>
+                    <div class="stat-box total">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="total-count">0</span>
+                            <span class="stat-label">Total</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button type="button" class="action-btn review-btn" id="review-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <path d="M16 13H8"/>
+                            <path d="M16 17H8"/>
+                            <path d="M10 9H8"/>
+                        </svg>
+                        Review Answers
+                    </button>
+                    <button type="button" class="action-btn retry-btn" id="retry-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 4v6h-6"/>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                        </svg>
+                        Try Again
+                    </button>
+                    <button type="button" class="action-btn home-btn" id="home-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                        Back to Home
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Screen -->
+        <section id="review-screen" class="screen">
+            <div class="review-container">
+                <div class="review-header">
+                    <button type="button" class="back-btn" id="review-back-btn" aria-label="Go back">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        Back
+                    </button>
+                    <h2 class="review-title" id="review-quiz-title">Quiz Review</h2>
+                </div>
+                <div class="review-list" id="review-list">
+                    <!-- Review items will be dynamically generated -->
+                </div>
+
+                <div class="review-footer">
+                    <button type="button" class="finish-review-btn" id="finish-review-btn">Finish Review</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
