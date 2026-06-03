@@ -2669,6 +2669,341 @@ const quizDatabase = {
                 explanation: "A Virtual-Machine Based Rootkit (VMBR) can be inserted between the physical hardware and an operating system."
             }
         ]
+    },
+    "basics-of-network": {
+        title: "Basics-of-Network",
+        questions: [
+            {
+                question: "What does the chapter say about networks in a virtualized environment compared to traditional physical networks?",
+                options: [
+                    "They are exactly the same",
+                    "They only use wireless connections",
+                    "They include invisible networks running inside servers",
+                    "They do not require any networking devices"
+                ],
+                correctAnswer: 2,
+                explanation: "Networks in a virtualized environment include invisible networks running inside servers."
+            },
+            {
+                question: "Which of the following is NOT mentioned as a physical network device in the slides?",
+                options: [
+                    "Router",
+                    "Layer 3 switch",
+                    "Firewall",
+                    "Server NIC"
+                ],
+                correctAnswer: 3,
+                explanation: "Server NIC is NOT mentioned as a physical network device in the slides."
+            },
+            {
+                question: "What is the primary difference between a Layer 2 switch and a Layer 3 switch in a virtualized environment?",
+                options: [
+                    "Layer 2 switches are faster",
+                    "Layer 3 switches can route between VLANs",
+                    "Layer 2 switches have more ports",
+                    "Layer 3 switches are only physical"
+                ],
+                correctAnswer: 1,
+                explanation: "Layer 3 switches can route between VLANs, which is the primary difference."
+            },
+            {
+                question: "Which of the following is a key learning objective of the course?",
+                options: [
+                    "How to build a physical server",
+                    "How physical and virtual switches work",
+                    "How to configure a router from scratch",
+                    "How to design a data center cooling system"
+                ],
+                correctAnswer: 1,
+                explanation: "How physical and virtual switches work is a key learning objective of the course."
+            },
+            {
+                question: "What type of switch is Open vSwitch according to the lecture?",
+                options: [
+                    "A physical Layer 3 switch",
+                    "A proprietary Cisco switch",
+                    "A virtual switch",
+                    "A Huawei distributed router"
+                ],
+                correctAnswer: 2,
+                explanation: "Open vSwitch is a virtual switch."
+            },
+            {
+                question: "The lecture mentions two specific virtual network architectures. Which are they?",
+                options: [
+                    "LAN and WAN",
+                    "Bridge and NAT",
+                    "TCP and UDP",
+                    "IPv4 and IPv6"
+                ],
+                correctAnswer: 1,
+                explanation: "Bridge and NAT are the two virtual network architectures mentioned."
+            },
+            {
+                question: "In a virtualized environment, where do invisible networks run?",
+                options: [
+                    "Only in the physical router",
+                    "Inside servers",
+                    "Only in the top-of-rack switch",
+                    "In the cooling system"
+                ],
+                correctAnswer: 1,
+                explanation: "In a virtualized environment, invisible networks run inside servers."
+            },
+            {
+                question: "Which Huawei virtualization product feature is likely covered in the last section?",
+                options: [
+                    "Physical router configuration",
+                    "Network features of the product",
+                    "Server BIOS settings",
+                    "Storage array management"
+                ],
+                correctAnswer: 1,
+                explanation: "Network features of the Huawei virtualization product are likely covered in the last section."
+            },
+            {
+                question: "Which device is typically used to connect different IP networks or subnets in a virtualized environment?",
+                options: [
+                    "Layer 2 switch",
+                    "Router",
+                    "Bridge",
+                    "NIC"
+                ],
+                correctAnswer: 1,
+                explanation: "A router is typically used to connect different IP networks or subnets."
+            },
+            {
+                question: "What is the role of a physical NIC in a virtualized environment?",
+                options: [
+                    "To provide power to the server",
+                    "To connect the physical server to the physical network",
+                    "To replace the need for a virtual switch",
+                    "To cool the server"
+                ],
+                correctAnswer: 1,
+                explanation: "The role of a physical NIC is to connect the physical server to the physical network."
+            },
+            {
+                question: "A distributed virtual switch (DVS) is different from a standard virtual switch because it:",
+                options: [
+                    "Cannot be used with VLANs",
+                    "Only works with Huawei products",
+                    "Spans multiple hosts and provides centralized management",
+                    "Is a physical device"
+                ],
+                correctAnswer: 2,
+                explanation: "A DVS spans multiple hosts and provides centralized management."
+            },
+            {
+                question: "Based on the slide 'How Do VMs Communicate?', VM traffic most likely flows through which component first?",
+                options: [
+                    "Physical router",
+                    "Virtual switch",
+                    "Internet",
+                    "Layer 3 switch"
+                ],
+                correctAnswer: 1,
+                explanation: "VM traffic most likely flows through the virtual switch first."
+            },
+            {
+                question: "Which of the following is a basic network concept implied to be necessary before virtualization?",
+                options: [
+                    "Cloud billing",
+                    "VLAN",
+                    "Server overclocking",
+                    "RAID configuration"
+                ],
+                correctAnswer: 1,
+                explanation: "VLAN is a basic network concept implied to be necessary before virtualization."
+            },
+            {
+                question: "In a virtualized environment, a router would most likely be used to:",
+                options: [
+                    "Connect virtual machines on the same host",
+                    "Provide power redundancy",
+                    "Route traffic between the virtualized environment and external networks",
+                    "Store VM snapshots"
+                ],
+                correctAnswer: 2,
+                explanation: "A router would route traffic between the virtualized environment and external networks."
+            },
+            {
+                question: "Which statement about Layer 2 switches in a virtualized environment is true?",
+                options: [
+                    "They make forwarding decisions based on IP addresses",
+                    "They make forwarding decisions based on MAC addresses",
+                    "They are always virtual",
+                    "They cannot be used with VLANs"
+                ],
+                correctAnswer: 1,
+                explanation: "Layer 2 switches make forwarding decisions based on MAC addresses."
+            },
+            {
+                question: "The lecture suggests that understanding traffic flows between VMs is important. If two VMs are on the same host and same VLAN, their traffic will likely:",
+                options: [
+                    "Go through the physical router",
+                    "Only go through the virtual switch, not the physical network",
+                    "Go through the internet",
+                    "Be blocked by default"
+                ],
+                correctAnswer: 1,
+                explanation: "If two VMs are on the same host and same VLAN, their traffic will only go through the virtual switch, not the physical network."
+            },
+            {
+                question: "Which page of the PDF introduces the concept of VLAN?",
+                options: [
+                    "Page 1",
+                    "Page 3",
+                    "Page 9",
+                    "VLAN is not mentioned"
+                ],
+                correctAnswer: 1,
+                explanation: "Page 3 introduces the concept of VLAN."
+            },
+            {
+                question: "What is the main function of a bridge in a virtual network architecture?",
+                options: [
+                    "To increase network speed",
+                    "To connect two network segments and forward frames",
+                    "To replace the need for an IP address",
+                    "To encrypt traffic"
+                ],
+                correctAnswer: 1,
+                explanation: "The main function of a bridge is to connect two network segments and forward frames."
+            },
+            {
+                question: "In the context of NAT (Network Address Translation) for virtualization, what does NAT typically allow?",
+                options: [
+                    "VMs to have direct public IP addresses",
+                    "VMs to share the host's IP address for outbound access",
+                    "VMs to bypass all security rules",
+                    "Physical switches to become virtual"
+                ],
+                correctAnswer: 1,
+                explanation: "NAT typically allows VMs to share the host's IP address for outbound access."
+            },
+            {
+                question: "Which image appears on page 9 of the PDF?",
+                options: [
+                    "A data center cooling diagram",
+                    "Physical network devices including Router, Layer 2/3 switches, and Server NIC",
+                    "A cloud computing architecture",
+                    "A virtual switch configuration"
+                ],
+                correctAnswer: 1,
+                explanation: "Page 9 shows physical network devices including Router, Layer 2/3 switches, and Server NIC."
+            },
+            {
+                question: "The lecture separates network knowledge into two types. What are they?",
+                options: [
+                    "LAN and WAN",
+                    "Physical network and virtual network",
+                    "IPv4 and IPv6",
+                    "Wired and wireless"
+                ],
+                correctAnswer: 1,
+                explanation: "The lecture separates network knowledge into physical network and virtual network."
+            },
+            {
+                question: "A Layer 3 switch in a virtualized environment can perform functions of both a:",
+                options: [
+                    "Router and a Layer 2 switch",
+                    "Firewall and a server",
+                    "NIC and a bridge",
+                    "Hub and a repeater"
+                ],
+                correctAnswer: 0,
+                explanation: "A Layer 3 switch can perform functions of both a router and a Layer 2 switch."
+            },
+            {
+                question: "According to the slide 'Mainstream Virtual Network Architecture', which component is likely central to VM communication?",
+                options: [
+                    "Physical router only",
+                    "Virtual switch",
+                    "UPS",
+                    "SAN switch"
+                ],
+                correctAnswer: 1,
+                explanation: "The virtual switch is likely central to VM communication."
+            },
+            {
+                question: "What is one benefit of using a distributed virtual switch as mentioned in the lecture?",
+                options: [
+                    "It requires no configuration",
+                    "It is cheaper than a physical switch",
+                    "It provides consistency across multiple hosts in a cluster",
+                    "It eliminates the need for VLANs"
+                ],
+                correctAnswer: 2,
+                explanation: "A distributed virtual switch provides consistency across multiple hosts in a cluster."
+            },
+            {
+                question: "Which page of the PDF lists the four main sections of the lecture?",
+                options: [
+                    "Page 4",
+                    "Page 8",
+                    "Both Page 4 and Page 8",
+                    "Page 14"
+                ],
+                correctAnswer: 2,
+                explanation: "Both Page 4 and Page 8 list the four main sections of the lecture."
+            },
+            {
+                question: "If a virtual environment uses Bridge mode, how do VMs typically appear on the physical network?",
+                options: [
+                    "They are hidden from the network",
+                    "They have their own MAC and IP addresses on the same subnet as the host",
+                    "They share the host's MAC address",
+                    "They cannot communicate with the physical network"
+                ],
+                correctAnswer: 1,
+                explanation: "In Bridge mode, VMs have their own MAC and IP addresses on the same subnet as the host."
+            },
+            {
+                question: "Which of the following is a true statement about physical network devices in a virtualized environment?",
+                options: [
+                    "Physical devices are completely replaced by virtual devices",
+                    "Physical devices are still required for external connectivity and high-performance switching",
+                    "Physical devices are only used for storage",
+                    "Physical devices are obsolete"
+                ],
+                correctAnswer: 1,
+                explanation: "Physical devices are still required for external connectivity and high-performance switching."
+            },
+            {
+                question: "The learning objectives include understanding concepts related to:",
+                options: [
+                    "RAID",
+                    "VLAN",
+                    "VPN",
+                    "DNS only"
+                ],
+                correctAnswer: 1,
+                explanation: "The learning objectives include understanding concepts related to VLAN."
+            },
+            {
+                question: "A server NIC (Network Interface Card) in a virtualized environment is often:",
+                options: [
+                    "Used only for management traffic",
+                    "Shared among multiple VMs via the virtual switch",
+                    "Assigned to only one VM directly without a virtual switch",
+                    "Not necessary if using a distributed switch"
+                ],
+                correctAnswer: 1,
+                explanation: "A server NIC is often shared among multiple VMs via the virtual switch."
+            },
+            {
+                question: "Based on the structure, the lecture is likely intended for:",
+                options: [
+                    "Beginner cloud computing or virtualization students",
+                    "Hardware repair technicians only",
+                    "Graphic designers",
+                    "Legal professionals"
+                ],
+                correctAnswer: 0,
+                explanation: "The lecture is likely intended for beginner cloud computing or virtualization students."
+            }
+        ]
     }
 };
 
